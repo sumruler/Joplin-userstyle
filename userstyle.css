@@ -1,0 +1,317 @@
+/* 全局属性
+* 页边距 padding:30px;
+* 全文字体 font-family:optima-Regular;
+* 英文换行 word-break:break-all;
+color:#595959;
+*/
+#rendered-md {
+  line-height: 1.75;
+  color: #595959;
+  letter-spacing: 2px;
+  background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+/* 段落，下方未标注标签参数均同此处
+* 上边距 margin-top:5px;
+* 下边距 margin-bottom:5px;
+* 行高 line-height:26px;
+* 词间距 word-spacing:3px;
+* 字间距 letter-spacing:3px;
+* 对齐 text-align:left;
+* 颜色 color:#3e3e3e;
+* 字体大小 font-size:16px;
+* 首行缩进 text-indent:2em;
+*/
+p {
+  color: #595959;
+  margin: 10px 10px;
+  
+  letter-spacing: 2px;
+  font-size: 14px;
+  word-spacing: 2px;
+}
+
+/* 一级标题 */
+h1 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #595959;
+  border-bottom: none;
+}
+
+/* 二级标题 */
+h2 {
+  display: table;
+  font-weight: bold;
+  margin: 20px 10px 0px 0px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f1e2ff;
+}
+
+/* 二级标题修饰 请参考有实例的主题 */
+h2:after {}
+
+/* 三级标题 */
+h3 {
+  font-size: 16px;
+  text-align: left;
+  margin: 20px 10px 0px 10px;
+  padding-left: 10px;
+  border-left: 5px solid #ead5fe;
+}
+
+
+/* 无序列表整体样式
+* list-style-type: square|circle|disc;
+*/
+ul {
+  margin-left: 40px;
+  font-size: 15px;
+  /*神奇逻辑，必须比li section的字体大才会在二级中生效*/
+  color: #595959;
+  list-style-type: circle;
+}
+
+
+/* 有序列表整体样式
+* list-style-type: upper-roman|lower-greek|lower-alpha;
+*/
+ol {
+  margin-left: 40px;
+  font-size: 15px;
+  color: #595959;
+}
+
+/* 列表内容，不要设置li
+*/
+li section {
+  font-size: 14px;
+  font-weight: normal;
+  color: #595959;
+}
+
+/* 引用
+* 左边缘颜色 border-left-color:black;
+* 背景色 background:gray;
+*/
+
+blockquote {
+  text-size-adjust: 100%;
+  line-height: 1.55em;
+  font-weight: 400;
+  border-radius: 20px;
+  color: #595959;
+  font-style: normal;
+  text-align: left;
+  box-sizing: inherit;
+  border-left: none;
+  border: 1px solid #DEC6FB!important;
+  background: #f5ebff40;
+  opacity: 1;
+  margin: 15px!important;
+  padding: 15px!important;
+
+}
+
+blockquote p {
+  color: #595959;
+}
+
+
+/* 链接 
+* border-bottom: 1px solid #009688;
+*/
+a {
+  color: #664D9D;
+  font-weight: normal;
+}
+
+
+
+a::before {
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath d='M477.934459 330.486594A50.844091 50.844091 0 0 1 406.752731 258.796425L512 152.532274a254.220457 254.220457 0 0 1 359.467726 359.467726L762.66137 618.772592a50.844091 50.844091 0 1 1-71.690168-71.690169l106.772591-106.772592a152.532274 152.532274 0 0 0-215.578947-215.578947z m70.164846 361.501489A50.844091 50.844091 0 1 1 619.789474 762.66137l-107.281033 107.281033A254.220457 254.220457 0 0 1 152.532274 512L259.813307 406.752731a50.844091 50.844091 0 1 1 72.19861 69.656405l-107.789474 107.281033a152.532274 152.532274 0 0 0 215.578947 215.578947z m-126.601788-16.77855a50.844091 50.844091 0 1 1-71.690168-71.690169l251.678252-251.678252a50.844091 50.844091 0 0 1 71.690169 71.690169z'/%3E%3C/svg%3E");
+  color: #DEC6FB;
+  display: inline-block;
+  width: 1em; /* 设置图标的宽度与字体大小一致 */
+  height: 1em; /* 设置图标的高度与字体大小一致 */
+  margin-right: 0.2em; /* 调整图标与链接文本之间的间距 */
+  vertical-align: text-top; /* 垂直居中图标 */
+}
+
+
+
+
+a:-webkit-any-link {
+
+  text-decoration: none;
+
+}
+
+strong::before {
+  content: '「';
+}
+
+/* 加粗 */
+strong {
+  color: #595959;
+  font-weight: bold;
+}
+
+strong::after {
+  content: '」';
+}
+
+/* 斜体 */
+em {
+  font-style: normal;
+  color: #595959;
+  background: #F6EEFF;
+}
+
+/* 加粗斜体 */
+em strong {
+  color: #595959;
+}
+
+/* 删除线 */
+del {
+  color: #595959;
+}
+
+/* 分隔线
+* 粗细、样式和颜色
+* border-top:1px solid #3e3e3e;
+*/
+hr {
+  height: 1px;
+  padding: 0;
+  border: none;
+  border-top: 2px solid #d9b8fa;
+}
+
+/* 图片
+* 宽度 width:80%;
+* 居中 margin:0 auto;
+* 居左 margin:0 0;
+*/
+img {
+  border-radius: 6px;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
+}
+
+/* 图片描述文字 */
+figcaption {
+  display: block;
+  font-size: 13px;
+  color: #595959;
+}
+
+/* 行内代码 */
+p code,
+li code {
+  color: #595959;
+}
+
+/* 非微信代码块
+* 代码块不换行 display:-webkit-box !important;
+* 代码块换行 display:block;
+*/
+.code-snippet__fix {
+  background: #f7f7f7;
+  border-radius: 2px;
+}
+
+pre code {
+  /* background: #f7f7f7; */
+}
+
+/*
+* 表格内的单元格
+* 字体大小 font-size: 16px;
+* 边框 border: 1px solid #ccc;
+* 内边距 padding: 5px 10px;
+*/
+table tr th,
+table tr td {
+  font-size: 14px;
+  color: #595959;
+}
+
+.footnotes {
+  background: #F6EEFF;
+  padding: 20px 20px 20px 20px;
+  font-size: 14px;
+  border: 0.8px solid #DEC6FB;
+  border-radius: 6px;
+  border: 1px solid #DEC6FB;
+}
+
+/* 脚注文字 */
+.footnote-word {
+  font-weight: normal;
+  color: #595959;
+}
+
+/* 脚注上标 */
+.footnote-ref {
+  font-weight: normal;
+  color: #595959;
+}
+
+/*脚注链接样式*/
+.footnote-item em {
+  background: #F6EEFF;
+  font-size: 14px;
+  color: #595959;
+  display: block;
+}
+
+/* "参考资料"四个字 
+* 内容 content: "参考资料";
+*/
+.footnotes-sep:before {
+  content: 'Reference';
+  color: #595959;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #DEC6FB;
+  display: inline;
+  background: linear-gradient(white 60%, #F6EEFF 40%);
+  font-size: 20px;
+}
+
+/* 参考资料编号 */
+.footnote-num {}
+
+/* 参考资料文字 */
+.footnote-item p {
+  color: #595959;
+  font-weight: bold;
+}
+
+/* 参考资料解释 */
+.footnote-item p em {
+  font-weight: normal;
+}
+
+/* 行间公式
+* 最大宽度 max-width: 300% !important;
+*/
+.block-equation svg {}
+
+/* 行内公式
+*/
+.inline-equation svg {}
+
+/* 滑动图片
+ */
+.imageflow-img {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+}
