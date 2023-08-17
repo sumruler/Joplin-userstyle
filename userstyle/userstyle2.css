@@ -1,0 +1,368 @@
+
+#rendered-md {
+  padding: 15px;
+  line-height: 2.25;
+  color: #000;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 1.1px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+#rendered-md p {
+  color: #000;
+  margin: 10px 10px;
+  font-size: 16px;
+  word-spacing: 2px;
+}
+
+/* 一级标题 */
+#rendered-md h1 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  border-bottom: none;
+}
+
+/* 一级标题内容 */
+#rendered-md h1 .content {
+  display: inline-block;
+  font-weight: bold;
+  color: #000;
+}
+
+/* 一级标题修饰 请参考有实例的主题 */
+#rendered-md h1:after {}
+
+/* 二级标题 */
+#rendered-md h2 {
+  font-size: 18px;
+  display: table;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 5px;
+  border-radius: 10px;
+  background: linear-gradient(to   right, #F7CE68,#FBABFE);
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  background-color: #fbd388d1;
+  transition: all ease-in-out .1s;
+}
+
+#rendered-md h2:hover{
+  background-position: -100% -100%;
+  transition: all ease-in-out .1s;
+}
+
+/* 二级标题内容 */
+#rendered-md h2 .content {
+
+}
+
+/* 二级标题修饰 请参考有实例的主题 */
+#rendered-md h2:after {}
+
+/* 三级标题 */
+#rendered-md h3::before {
+  content: '> ';
+  font-size: 16px;
+  display: inline-block;
+  width: 0px;
+  white-space: nowrap;
+  vertical-align: text-bottom;
+  color: #ffc000;
+  overflow: hidden;
+}
+
+#rendered-md h3:hover::before{
+  width: 20px;
+  color: #f68800;
+  transition: all linear .2s;
+}
+
+#rendered-md h3 {
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 10px;
+  border-left: 5px solid #ffc000;
+  border-bottom: 2px hidden #ffc000;
+}
+
+/* 无序列表整体样式
+* list-style-type: square|circle|disc;
+*/
+#rendered-md ul {
+  font-size: 15px; 
+  color: #000;
+  list-style-type: disc;
+}
+
+
+/* 有序列表整体样式
+* list-style-type: upper-roman|lower-greek|lower-alpha;
+*/
+#rendered-md ol {
+  font-size: 15px;
+  color: #000;
+}
+
+/* 列表内容，不要设置li
+*/
+#rendered-md li section {
+  font-size: 14px;
+  font-weight: normal;
+  color: #000;
+}
+
+/* 引用
+* 左边缘颜色 border-left-color:black;
+* 背景色 background:gray;
+*/
+
+#rendered-md blockquote {
+  margin: 10px 3px;
+  text-size-adjust: 100%;
+  line-height: 1.55em;
+  font-weight: 400;
+  border-radius: 20px;
+  color: #000;
+  font-style: normal;
+  text-align: left;
+  box-sizing: inherit;
+  border-left: none;
+  border: 1px solid #ffc000!important;
+  background:none;
+  padding: 15px;
+  margin:3px;
+  opacity: 1;
+
+}
+
+#rendered-md blockquote p {
+  color: #000;
+}
+
+/* 链接 
+* border-bottom: 1px solid #009688;
+*/
+#rendered-md a {
+  color: #000;
+  border-bottom: 1px solid #ffb143;
+  text-decoration: none;
+  transform:all linear 0.1s;
+}
+
+#rendered-md a:hover {
+  font-weight:bolder;
+  color: #e46918;
+  border-bottom: 1px solid #e46918;
+  transform:all linear 0.1s;
+}
+
+#rendered-md a::before {
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath  d='M477.934459 330.486594A50.844091 50.844091 0 0 1 406.752731 258.796425L512 152.532274a254.220457 254.220457 0 0 1 359.467726 359.467726L762.66137 618.772592a50.844091 50.844091 0 1 1-71.690168-71.690169l106.772591-106.772592a152.532274 152.532274 0 0 0-215.578947-215.578947z m70.164846 361.501489A50.844091 50.844091 0 1 1 619.789474 762.66137l-107.281033 107.281033A254.220457 254.220457 0 0 1 152.532274 512L259.813307 406.752731a50.844091 50.844091 0 1 1 72.19861 69.656405l-107.789474 107.281033a152.532274 152.532274 0 0 0 215.578947 215.578947z m-126.601788-16.77855a50.844091 50.844091 0 1 1-71.690168-71.690169l251.678252-251.678252a50.844091 50.844091 0 0 1 71.690169 71.690169z'/%3E%3C/svg%3E");
+  color: #f68800;
+  display: inline-block;
+  width: 1em; /* 设置图标的宽度与字体大小一致 */
+  height: 1em; /* 设置图标的高度与字体大小一致 */
+  margin-right: 0.2em; /* 调整图标与链接文本之间的间距 */
+  vertical-align: sub; /* 垂直居中图标 */
+}
+
+
+/* 加粗 */
+#rendered-md strong {
+  color: #000;
+  font-weight: bold;
+}
+
+#rendered-md strong::after {
+
+}
+
+/* 斜体 */
+#rendered-md em {
+  font-style: normal;
+  color: #000;
+  background: #fff3d5;
+}
+
+/* 加粗斜体 */
+#rendered-md em strong {
+  color: #595959;
+}
+
+/* 删除线 */
+#rendered-md del {
+  color: #595959;
+}
+
+/* 分隔线
+* 粗细、样式和颜色
+* border-top:1px solid #3e3e3e;
+*/
+#rendered-md hr {
+  height: 1px;
+  padding: 0;
+  border: none;
+  border-top: 2px solid #ffc000;
+}
+
+/* 图片
+* 宽度 width:80%;
+* 居中 margin:0 auto;
+* 居左 margin:0 0;
+*/
+#rendered-md img {
+  border-radius: 6px;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
+}
+
+/* 图片描述文字 */
+#rendered-md figcaption {
+  display: block;
+  font-size: 13px;
+  color: #595959;
+}
+
+/* 行内代码 */
+#rendered-md p code {
+  color: #dc3545;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  letter-spacing: 0.5px;
+  
+}
+#rendered-md li code {
+  color: #595959;
+}
+
+/* 非微信代码块
+* 代码块不换行 display:-webkit-box !important;
+* 代码块换行 display:block;
+*/
+#rendered-md .hljs::before{
+
+  content: '';
+  display: block;
+  background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUwcHgiIGhlaWdodD0iMTMwcHgiPgogIDxlbGxpcHNlIGN4PSI2NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgc3Ryb2tlPSJyZ2IoMjIwLDYwLDU0KSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJyZ2IoMjM3LDEwOCw5NikiLz4KICA8ZWxsaXBzZSBjeD0iMjI1IiBjeT0iNjUiIHJ4PSI1MCIgcnk9IjUyIiAgc3Ryb2tlPSJyZ2IoMjE4LDE1MSwzMykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDI0NywxOTMsODEpIi8+CiAgPGVsbGlwc2UgY3g9IjM4NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgIHN0cm9rZT0icmdiKDI3LDE2MSwzNykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDEwMCwyMDAsODYpIi8+Cjwvc3ZnPg==);
+
+  height: 30px;
+  width: 100%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  background-position: 5px 5px;
+}
+
+#rendered-md .hljs  {
+  background: #f8f8f8;
+  border-radius: 5px;
+  padding: 10px;
+  transform:0.5s;
+}
+
+#rendered-md .hljs:hover  {
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 10px;
+  transform:0.5s;
+}
+
+
+
+#rendered-md pre code{
+  display: block;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+
+
+/*
+* 表格内的单元格
+* 字体大小 font-size: 16px;
+* 边框 border: 1px solid #ccc;
+* 内边距 padding: 5px 10px;
+*/
+#rendered-md table tr th,
+#rendered-md table tr td {
+  font-size: 14px;
+  color: #000;
+}
+
+#rendered-md .footnotes {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 0.8px solid #ffc000;
+}
+
+/* 脚注文字 */
+#rendered-md .footnote-word {
+  font-weight: normal;
+  color: #595959;
+}
+
+/* 脚注上标 */
+#rendered-md .footnote-ref {
+  font-weight: normal;
+  color: #595959;
+}
+
+/*脚注链接样式*/
+#rendered-md .footnote-item em {
+
+  font-size: 14px;
+  color: #595959;
+  display: block;
+  background:none
+}
+
+/* "参考资料"四个字 
+* 内容 content: "参考资料";
+*/
+#rendered-md .footnotes-sep:before {
+  content: '参考资料';
+  display: inline-block;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ffc000;
+  font-size: 16px;
+}
+
+/* 参考资料编号 */
+#rendered-md .footnote-num {}
+
+/* 参考资料文字 */
+#rendered-md .footnote-item p {
+  color: #595959;
+  font-weight: bold;
+}
+
+/* 参考资料解释 */
+#rendered-md .footnote-item p em {
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* 行间公式
+* 最大宽度 max-width: 300% !important;
+*/
+#rendered-md .block-equation svg {}
+
+/* 行内公式
+*/
+#rendered-md .inline-equation svg {}
+
+/* 滑动图片
+ */
+#rendered-md .imageflow-img {
+  display: inline-block;
+  width:99%;
+  margin-bottom: 0;
+}
