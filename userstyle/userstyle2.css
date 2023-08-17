@@ -74,6 +74,7 @@
   vertical-align: text-bottom;
   color: #ffc000;
   overflow: hidden;
+  transition: all linear .2s;
 }
 
 #rendered-md h3:hover::before{
